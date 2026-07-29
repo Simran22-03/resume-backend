@@ -7,11 +7,7 @@ from .views import (
 
 urlpatterns = [
     path(
-        "analyze/",
-        analyze_resume_view,
-    ),
+        "analyze/", analyze_resume_view,),
     path(
-        "chat/",
-        chatbot_view,
-    ),
+        "chat/",chatbot_view,),
 ]

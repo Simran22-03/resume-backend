@@ -1,6 +1,8 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+import traceback
 
+  
 from .services.pdf_reader import extract_text_from_pdf
 from .services.gemini_service import (
     analyze_resume,
@@ -39,9 +41,7 @@ def analyze_resume_view(request):
 
         return Response(result)
 
-    except Exception as e:
-        import traceback
-
+        except Exception as e:
         traceback.print_exc()
 
         return Response(
